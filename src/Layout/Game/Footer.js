@@ -39,7 +39,7 @@ export const SaveModal = styled.div`
     rgba(219, 196, 196, 1) 44%
   );
   border: 4px solid black;
-
+  user-select: text;
   @media (max-width: 1024px) {
     height: 86.5vh;
     width: 86.5vw;

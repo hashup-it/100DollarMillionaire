@@ -16,6 +16,12 @@ export const AppContainer = styled.div`
   padding: 0;
   display: flex;
   justify-content: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   margin: -8px 0 -100px -8px;
   @media (max-width: 1024px) {
     min-height: 100vh;
