@@ -41,7 +41,6 @@ export const GameController = ({
 
   const handleWin = () => {
     if (balance >= 1000000) setIsWin(true);
-    alert(isWin, "lol");
   };
 
   const handleBuy = (percent) => {
