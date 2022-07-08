@@ -6,11 +6,12 @@ export const CryptoMenuContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* @media (max-width: 1024px) {
-    width: 100%;
+  @media (max-width: 1024px) {
+    /* width: 100%;
     margin-top: 0;
-    height: 70%;
-  } */
+    height: 70%; */
+    //border: none;
+  }
 `;
 
 export const PeriodChoice = styled.div`

@@ -10,6 +10,9 @@ export const FooterContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 10px;
+  @media (max-width: 1024px) {
+    border: none;
+  }
 `;
 
 export const FooterRow = styled.div`

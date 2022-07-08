@@ -18,8 +18,8 @@ export const AppContainer = styled.div`
   justify-content: center;
   margin: -8px 0 -100px -8px;
   @media (max-width: 1024px) {
-    height: 100vh;
-    max-height: 120vh;
+    min-height: 100vh;
+    //max-height: 120vh; */
     width: 100vw;
     max-width: 100vw;
   } ;

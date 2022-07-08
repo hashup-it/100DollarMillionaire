@@ -13,8 +13,9 @@ export const GameControllerContainer = styled.div`
 
   @media (max-width: 1024px) {
     margin-top: 0;
-    border-bottom: none;
-    border-right: 4px solid black;
+    /* border-bottom: none;
+    border-right: 4px solid black; */
+    border: none;
   }
 `;
 
@@ -70,6 +71,7 @@ export const CryptoPrice = styled.div`
     width: 100%;
     margin-top: 0;
     height: 20%;
+    border: none;
   }
 `;
 
