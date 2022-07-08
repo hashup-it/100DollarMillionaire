@@ -1,9 +1,7 @@
-import { ChartContainer, CryptoSelection } from "../../../Layout/Game/Chart";
+import { ChartContainer } from "../../../Layout/Game/Chart";
 import { Line } from "react-chartjs-2";
-import { useState } from "react";
 import { balanceHistory } from "../ScoreBoard/balanceHistory";
 import { Chart as ChartJS, registerables } from "chart.js";
-import { Chart } from "react-chartjs-2";
 ChartJS.register(...registerables);
 
 export const BalanceChart = ({ day, selectedCrypto, setIsChart, period }) => {

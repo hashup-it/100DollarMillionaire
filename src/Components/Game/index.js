@@ -1,15 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { CryptoMenu } from "./CryptoMenu";
 import { Footer } from "./Footer";
 import { GameController } from "./GameController";
 import { GameTitle } from "./GameTitle";
 import { ScoreBoard } from "./ScoreBoard";
-import {
-  GameContainer,
-  HashUpLogo,
-  Intro,
-  License,
-} from "../../Layout/Game/index";
+import { GameContainer, HashUpLogo, Intro } from "../../Layout/Game/index";
 
 import { Cryptocurrency } from "../../Cryptocurrency";
 import { LTCpriceHistory } from "../../LTCpriceHistory";
@@ -19,7 +16,7 @@ import { MATICpriceHistory } from "../../MATICpriceHistory";
 import { balanceHistory } from "./ScoreBoard/balanceHistory";
 import { HistoryStep } from "./HistoryIntro/historyStep";
 
-export const Game = ({}) => {
+export const Game = () => {
   const [money, setMoney] = useState(100);
   const [day, setDay] = useState(0);
   const [chartOption, setChartOption] = useState(1);
@@ -102,7 +99,7 @@ export const Game = ({}) => {
     if (day >= balanceHistory.length) {
       while (day >= balanceHistory.length) balanceHistory.push(balance);
     } else balanceHistory.push(balance);
-  }, [day]);
+  }, [balance, calculateBalance, day]);
 
   const handleSetCryptoBalance = (amount) => {
     const tempWallet = wallet;

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useCallback, useEffect, useState } from "react";
 
 import { Chart } from "../Chart/index";
 import {
@@ -23,18 +24,18 @@ export const CryptoMenu = ({
   const [period, setPeriod] = useState(31);
   const [balancePeriod, setBalancePeriod] = useState(31);
 
-  const checkIfCrypto = () => {
+  const checkIfCrypto = useCallback(() => {
     for (let c in wallet) {
       if (wallet[c.valueOf()] > 0) return true;
     }
     return false;
-  };
+  });
 
   const [ifCrypto, setIfCrypto] = useState(checkIfCrypto());
 
   useEffect(() => {
     setIfCrypto(checkIfCrypto());
-  }, [Object.values(wallet), period]);
+  }, [checkIfCrypto, period]);
 
   const data = {
     labels: cryptocurrencies.map((c) => {

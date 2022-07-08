@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   ScoreBoardContainer,
   ScoreBoardValue,
 } from "../../../Layout/Game/ScoreBoard";
-import { balanceHistory } from "./balanceHistory";
 
 export const ScoreBoard = ({
   money,

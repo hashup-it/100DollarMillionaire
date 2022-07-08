@@ -1,7 +1,5 @@
-import { ChartContainer, CryptoSelection } from "../../../Layout/Game/Chart";
+import { ChartContainer } from "../../../Layout/Game/Chart";
 import { Line } from "react-chartjs-2";
-import { useState } from "react";
-import { balanceHistory } from "../ScoreBoard/balanceHistory";
 
 export const Chart = ({ day, selectedCrypto, setIsChart, isChart, period }) => {
   const data = {

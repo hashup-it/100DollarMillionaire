@@ -118,6 +118,7 @@ export const Footer = ({
                 "," +
                 cryptocurrencies.map((c) => {
                   if (c.released === true) return wallet[c.shortName];
+                  else return "";
                 })
             )}
           </SaveModalHash>

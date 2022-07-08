@@ -1,10 +1,7 @@
 import React from "react";
-import {
-  GameTitleContainer,
-  StyledGameTitle,
-} from "../../../Layout/Game/GameTitle";
+import { GameTitleContainer } from "../../../Layout/Game/GameTitle";
 
-export const GameTitle = ({}) => {
+export const GameTitle = () => {
   return (
     <GameTitleContainer>
       <p>
