@@ -12,7 +12,8 @@ export const Chart = ({ day, selectedCrypto, setIsChart, isChart, period }) => {
       }),
     datasets: [
       {
-        pointStyle: "rect",
+        //pointStyle: "rect",
+        pointStyle: "dash",
         label: selectedCrypto.name,
         data: selectedCrypto.priceHistory
           .filter((e, i) => {

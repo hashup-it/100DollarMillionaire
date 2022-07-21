@@ -15,7 +15,8 @@ export const BalanceChart = ({ day, selectedCrypto, setIsChart, period }) => {
       }),
     datasets: [
       {
-        pointStyle: "rect",
+        //pointStyle: "rect",
+        pointStyle: "dash",
         label: "Balance",
         data: balanceHistory.slice(-period),
         // .filter((e, i) => {
