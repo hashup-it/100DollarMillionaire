@@ -4,7 +4,7 @@ export const AppContainer = styled.div`
   font-family: "Press Start 2P", cursive;
   height: 100vh;
   width: 100vw;
-  max-height: 100vh;
+  max-height: auto;
   max-width: 100vw;
   background: rgb(235, 81, 81);
   background: linear-gradient(

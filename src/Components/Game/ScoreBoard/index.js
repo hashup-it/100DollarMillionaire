@@ -38,7 +38,7 @@ export const ScoreBoard = ({
           <div key={i}>
             {el}:{" "}
             <ScoreBoardValue>
-              {Math.round(wallet[el] * 1000000) / 1000000} {el}
+              {(Math.round(wallet[el] * 1000000) / 1000000).toFixed(4)} {el}
             </ScoreBoardValue>{" "}
             <div></div>
           </div>

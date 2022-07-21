@@ -34,6 +34,12 @@ export const Footer = ({
     return string.split(subString, index).join(subString).length;
   };
 
+  const copyToClipboardAsync = (str) => {
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+      return navigator.clipboard.writeText(str);
+    return Promise.reject("The Clipboard API is not available.");
+  };
+
   const handleImport = () => {
     const regex = /(\d+(.\d+)?,)+\d+/;
     let text = "";
@@ -122,9 +128,29 @@ export const Footer = ({
                 })
             )}
           </SaveModalHash>
-          <BuyButton onClick={() => setIsSave(false)} sell>
-            Close
-          </BuyButton>
+          <SaveModalRow>
+            <BuyButton
+              onClick={() => {
+                copyToClipboardAsync(
+                  btoa(
+                    day +
+                      "," +
+                      money +
+                      "," +
+                      cryptocurrencies.map((c) => {
+                        if (c.released === true) return wallet[c.shortName];
+                        else return "";
+                      })
+                  )
+                );
+              }}
+            >
+              Copy
+            </BuyButton>
+            <BuyButton onClick={() => setIsSave(false)} sell>
+              Close
+            </BuyButton>
+          </SaveModalRow>
         </SaveModal>
       )}
       {isImport && (
@@ -132,7 +158,7 @@ export const Footer = ({
           <SaveModalHelp>
             Paste copied content below in order to load your progress.
           </SaveModalHelp>
-          <SaveModalInput onChange={handleInput} />
+          <SaveModalInput onChange={handleInput} autoFocus />
           <SaveModalRow>
             <BuyButton
               onClick={() => {
